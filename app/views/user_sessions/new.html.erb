@@ -1,0 +1,21 @@
+<h1>Login</h1>
+ 
+<% form_for @user_session, :url => user_session_path do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :login %><br />
+  <%= f.text_field :login %><br />
+  <br />
+  <%= f.label :password %><br />
+  <%= f.password_field :password %><br />
+  <br />
+  <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
+  <br />
+  <%= f.submit 'Login' %>
+<% end %>
+
+<% form_tag({:controller => 'users', :action => 'create'}, {:method => 'post'}) do %>
+  <%#= oauth_register_button :value => 'Sign In with Twitter' %>
+  <input type='image' src='/images/twitter.png' value='Sign In with Twitter' name='register_with_oauth' id='user_submit' class=''/>
+<% end %>
+
+<%= authlogic_facebook_login_button %>

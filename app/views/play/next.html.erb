@@ -1,0 +1,29 @@
+<% content_for :head do %>
+  <script type="text/javascript" src="/javascripts/audio-player.js"></script> 
+  <script type="text/javascript">  
+    AudioPlayer.setup("http://ai.tetesur.com/flash/player.swf", {  
+      width: 290  
+    });  
+  </script>  
+<% end %>
+
+<script type='text/javascript' charset='utf-8'>
+  $(document).ready(function($)
+  {
+    setInterval('cursorAnimation()', 950);
+  });
+</script>
+
+<div id='page'>
+  <div id='misc'>
+    fus<span class='cursor'>i</span>on
+    <%= render :partial => 'shared/flash_messages' %>
+  </div>
+  <div id='content'>
+    Hello <%= current_user.login -%>, how are you today? I think that I may need some help. Can you help me?
+
+    <div id='audioPlayer'>
+      <%= audioPlayer("hello #{current_user.login}, how are you today? I think that I may need some help. Can you help me?") -%>
+    </div>
+  </div>
+</div>

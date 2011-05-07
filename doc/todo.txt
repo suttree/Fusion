@@ -1,0 +1,14 @@
+Add in more plugins, such as these (taken from a rails template):
+
+gem 'rubyist-aasm'
+gem 'activemerchant', :lib => 'active_merchant'
+gem 'aws-s3', :lib => 'aws/s3'
+gem 'thoughtbot-factory_girl', :lib => 'factory_girl', :source => 'http://gems.github.com'
+gem 'mislav-will_paginate', :lib => 'will_paginate',  :source => 'http://gems.github.com'
+
+plugin 'exception_notifier', :git => 'git://github.com/rails/exception_notification.git'
+plugin 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+plugin 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
+plugin 'asset_packager', :git => 'http://synthesis.sbecker.net/pages/asset_packager'
+plugin 'attachment_fu', :git => 'git://github.com/technoweenie/attachment_fu.git'
+plugin 'role_requirement', :git => 'git://github.com/timcharper/role_requirement.git'
